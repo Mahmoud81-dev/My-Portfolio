@@ -10,10 +10,11 @@ import Navbar from "./components/Navbar";
 import StarsCanvas from "./components/StarsCanvas";
 import Tech from "./components/Tech";
 import Works from "./components/Works";
+import { colors } from "./constants";
 
 function App() {
   return(
-    <Box sx={{ position: "relative"}}>
+    <Box sx={{ position: "relative"}}  >
     <Box  >
       <Navbar />
       <Hero />

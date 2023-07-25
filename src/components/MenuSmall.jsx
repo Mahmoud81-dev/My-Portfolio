@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import { navLinks } from "../constants";
 import { Link } from "react-router-dom";
+import { Close } from "@mui/icons-material";
 function MenuSmall() {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState(false);
@@ -16,7 +17,7 @@ function MenuSmall() {
       {/* Menu PhoneSize */}
 
       <Box  id="basic-button">
-        <MenuIcon onClick={() => setOpen(true)} />
+        {open?<Close onClick={()=>setOpen(false)}/>:<MenuIcon onClick={() => setOpen(true)} />}
       </Box>
 
       {/* Menu CONTENTS */}
@@ -30,6 +31,7 @@ function MenuSmall() {
       >
         {navLinks.map((link) => (
           <Link
+          key={link.id}
             to={link.id}
             style={{
               textDecoration: "none",

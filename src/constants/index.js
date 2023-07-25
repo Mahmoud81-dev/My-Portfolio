@@ -262,4 +262,10 @@ const projects = [
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+const colors = {
+
+  primary:"#050816",
+  secondary:"#aaa6c3",
+}
+
+export { services, technologies, experiences, testimonials, projects,colors };

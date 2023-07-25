@@ -2,18 +2,17 @@ import { Box, Drawer, Stack, Typography } from "@mui/material";
 import React, { useState } from "react";
 import logo from "../assets/logos/m-high-resolution-logo-white-on-transparent-background.png";
 import { Link } from "react-router-dom";
-import { navLinks } from "../constants";
+import { colors, navLinks } from "../constants";
 import MenuSmall from "./MenuSmall";
-import { Spa } from "@mui/icons-material";
 
 function Navbar() {
   const [active, setActive] = useState(false);
  
   return (
-    <Box p={2} border={"1px solid red"}>
+    <Box p={2}  bgcolor={colors.primary} >
       <Stack
         direction="row"
-        px={{ md: 8, lg: 5 }}
+        px={{xs:2, md: 8 }}
         justifyContent="space-between"
         alignItems="center"
         // sx={{ position: "absolute", top: 0, left: 0, zIndex: 1, p: 2 }}
